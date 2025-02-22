@@ -18,13 +18,13 @@ CREATE TABLE Books (\
     ISBN VARCHAR(20) UNIQUE,\
     PublishedYear INT,\
     CopiesAvailable INT DEFAULT 1,\
-    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID),\
+    FOREIGN KEY (AuthorID) REFERENCES Authors(Author_ID),\
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)\
 );\
 \
 -- Table for Authors\
 CREATE TABLE Authors (\
-    AuthorID INT PRIMARY KEY AUTO_INCREMENT,\
+    Author_ID INT PRIMARY KEY AUTO_INCREMENT,\
     Name VARCHAR(255) NOT NULL\
 );\
 \
